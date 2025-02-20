@@ -3,18 +3,18 @@ let adj = ['great', 'big'];
 let noun = ['jogger', 'raccoon']; 
 let extensions = ['.com', '.net', '.us', '.io'];
 
-    for (let p of pronoun) { 
-      for (let a of adj) {
-        for (let n of noun) {
-          for (let ext of extensions) {
-            console.log(p + a + n + ext);
+    for (let pronouns of pronoun) { 
+      for (let adjs of adj) {
+        for (let nouns of noun) {
+          for (let extension of extensions) {
+            console.log(pronouns + adjs + nouns + extension);
           
           } 
         // Domain hacks
-        let lastTwo = n.slice(-2);
+        let lastTwo = nouns.slice(-2);
         let domainHackExt = '.' + lastTwo
         if (extensions.includes(domainHackExt)) {
-          console.log(p + a + n.slice(0, -2) + domainHackExt) 
+          console.log(pronouns + adjs + nouns.slice(0, -2) + domainHackExt) 
       }
     }
   }
