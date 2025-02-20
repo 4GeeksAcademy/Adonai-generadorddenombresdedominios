@@ -1,11 +1,21 @@
-import "bootstrap";
-import "./style.css";
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'raccoon']; 
+let extensions = ['.com', '.net', '.us', '.io'];
 
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+    for (let p of pronoun) { 
+      for (let a of adj) {
+        for (let n of noun) {
+          for (let ext of extensions) {
+            console.log(p + a + n + ext);
+          
+          } 
+        // Domain hacks
+        let lastTwo = n.slice(-2);
+        let domainHackExt = '.' + lastTwo
+        if (extensions.includes(domainHackExt)) {
+          console.log(p + a + n.slice(0, -2) + domainHackExt) 
+      }
+    }
+  }
+}
